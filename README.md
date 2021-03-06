@@ -1,4 +1,4 @@
 ### Katapult
 
 
-This repository would contain all the code used during this challenge. 
+This repository would contain all the code and data used during this challenge. 
