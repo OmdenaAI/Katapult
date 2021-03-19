@@ -1,0 +1,85 @@
+DATASET NAME DataSet1 WINDOW=FRONT.
+DESCRIPTIVES VARIABLES=Startups P.Stability R.Law C.Corruption
+  /STATISTICS=MEAN STDDEV VARIANCE RANGE MIN MAX SEMEAN KURTOSIS SKEWNESS.
+
+Descriptive Statistics												
+	N	Range	Minimum	Maximum	Mean		Std. Deviation	Variance	Skewness		Kurtosis	
+	Statistic	Statistic	Statistic	Statistic	Statistic	Std. Error	Statistic	Statistic	Statistic	Std. Error	Statistic	Std. Error
+Startups	11	510	689	1199	886.36	58.691	194.655	37890.455	.602	.661	-1.278	1.279
+Political Stability	11	.37	.63	1.00	.7636	.04224	.14009	.020	.966	.661	-.710	1.279
+Rule of Law	11	.28	.72	1.00	.8418	.03033	.10058	.010	.211	.661	-1.602	1.279
+Control of Corruption	11	.29	.71	1.00	.8300	.02914	.09664	.009	.476	.661	-.939	1.279
+Valid N (listwise)	11											
+CORRELATIONS
+  /VARIABLES=Startups P.Stability R.Law C.Corruption
+  /PRINT=TWOTAIL NOSIG
+  /STATISTICS DESCRIPTIVES
+  /MISSING=PAIRWISE.
+Descriptive Statistics			
+	Mean	Std. Deviation	N
+Startups	886.36	194.655	11
+Political Stability	.7636	.14009	11
+Rule of Law	.8418	.10058	11
+Control of Corruption	.8300	.09664	11
+Correlations					
+		Startups	Political Stability	Rule of Law	Control of Corruption
+Startups	Pearson Correlation	1	.951**	.948**	.797**
+	Sig. (2-tailed)		.000	.000	.003
+	N	11	11	11	11
+Political Stability	Pearson Correlation	.951**	1	.913**	.764**
+	Sig. (2-tailed)	.000		.000	.006
+	N	11	11	11	11
+Rule of Law	Pearson Correlation	.948**	.913**	1	.821**
+	Sig. (2-tailed)	.000	.000		.002
+	N	11	11	11	11
+Control of Corruption	Pearson Correlation	.797**	.764**	.821**	1
+	Sig. (2-tailed)	.003	.006	.002	
+	N	11	11	11	11
+** Correlation is significant at the 0.01 level (2-tailed).					
+REGRESSION
+  /DESCRIPTIVES MEAN STDDEV CORR SIG N
+  /MISSING LISTWISE
+  /STATISTICS COEFF OUTS R ANOVA CHANGE
+  /CRITERIA=PIN(.05) POUT(.10)
+  /NOORIGIN
+  /DEPENDENT SMEs
+  /METHOD=ENTER Corruption Law Politics
+  /SCATTERPLOT=(SMEs ,*ZPRED)
+  /RESIDUALS HISTOGRAM(ZRESID) NORMPROB(ZRESID).
+Descriptive Statistics			
+	Mean	Std. Deviation	N
+SMEs Performance	886.3636	194.65471	11
+Control of Corruption	.8300	.09664	11
+Rule of Law	.8418	.10058	11
+Political Stability	.7636	.14009	11
+Correlations					
+		SMEs Performance	Control of Corruption	Rule of Law	Political Stability
+Pearson Correlation	SMEs Performance	1.000	.797	.948	.951
+	Control of Corruption	.797	1.000	.821	.764
+	Rule of Law	.948	.821	1.000	.913
+	Political Stability	.951	.764	.913	1.000
+Sig. (1-tailed)	SMEs Performance	.	.002	.000	.000
+	Control of Corruption	.002	.	.001	.003
+	Rule of Law	.000	.001	.	.000
+	Political Stability	.000	.003	.000	.
+N	SMEs Performance	11	11	11	11
+	Control of Corruption	11	11	11	11
+	Rule of Law	11	11	11	11
+	Political Stability	11	11	11	11
+
+ANOVAa						
+Model		Sum of Squares	df	Mean Square	F	Sig.
+1	Regression	357155.551	3	119051.850	38.317	.000b
+	Residual	21748.995	7	3106.999		
+	Total	378904.545	10			
+a Dependent Variable: SMEs Performance						
+b Predictors: (Constant), Political Stability, Control of Corruption, Rule of Law						
+
+Coefficientsa						
+Model		Unstandardized Coefficients		Standardized Coefficients	t	Sig.
+		B	Std. Error	Beta		
+1	(Constant)	-450.532	185.720		-2.426	.046
+	Control of Corruption	70.695	320.087	.035	.221	.832
+	Rule of Law	872.021	485.677	.451	1.795	.116
+	Political Stability	712.559	308.852	.513	2.307	.054
+a Dependent Variable: SMEs Performance						
