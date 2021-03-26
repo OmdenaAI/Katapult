@@ -130,16 +130,7 @@ def scrape_info(url):
     except:
         time.sleep(3)
 
-    articles = ' , '.join(articles)
-
-    # saving this data in dictionary
-    data = {'business_name': business_name, 'country': country, 'business_description': business_description,
-            'based_in': based_in, 'tags': tags, 'founded': founded, 'total_funding': total_funding, 'website':website,
-            'articles': articles}
-
-
-
-    return data
+   
 
 
 # ------------------------------------------------------------------------------------------------------
