@@ -1,1 +1,0 @@
-This folder has datasets that can be used for creating a baseline, as they are 2 years (or more) old. 
