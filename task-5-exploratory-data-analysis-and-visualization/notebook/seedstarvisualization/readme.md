@@ -15,7 +15,9 @@
 > > #### F3. Distribution of Number of Employees and Teammate across Status of Fundings
 
 ![Number of employee vs Status of funding](https://github.com/OmdenaAI/Katapult/blob/main/task-5-exploratory-data-analysis-and-visualization/notebook/seedstarvisualization/F3.%20Distribution%20of%20Employee%20Num%20and%20Teammate%20across%20Status%20of%20Fundings.png)
-
+#
+#
+#
 > > #### F4. Status of Funding and Amount to Raised Over Time
 
 ![Status of funding vs amount raised](https://github.com/OmdenaAI/Katapult/blob/main/task-5-exploratory-data-analysis-and-visualization/notebook/seedstarvisualization/Status%20of%20Fudning%20-%20Amount%20to%20Raised%20Over%20Time.png)
