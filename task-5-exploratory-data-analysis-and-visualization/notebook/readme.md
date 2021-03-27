@@ -1,3 +1,3 @@
-### Notebook Folder 
+# Notebook Folder
 
-> > This folder would contain all notebook used for Exploratory Analysis 
+This folder contains all notebooks used for Exploratory Analysis.
